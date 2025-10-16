@@ -1,0 +1,24 @@
+file_format: "1"
+
+name: name
+url: https://github.com/lodgnewt/aht-module
+maintainers:
+  - lodgnewt
+
+board: nice_nano_v2
+microcontroller: nrf52840
+
+features:
+  - keys
+  - ble
+  - battery
+  - power
+
+matrix:
+  rows: 3
+  cols: 4
+  diode_direction: COL2ROW
+
+build:
+  cmake-args:
+    - -DZMK_CONFIG="config"
