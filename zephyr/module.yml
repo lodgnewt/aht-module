@@ -1,5 +1,5 @@
-name: aht-module
+name: zmk-keyboard-aht
 build:
   settings:
     board_root: .
-    dts_root: .
+

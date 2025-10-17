@@ -19,6 +19,6 @@ matrix:
   cols: 4
   diode_direction: COL2ROW
 
-build:
-  cmake-args:
-    - -DZMK_CONFIG="config"
+#build:
+#  cmake-args:
+#    - -DZMK_CONFIG="config"
