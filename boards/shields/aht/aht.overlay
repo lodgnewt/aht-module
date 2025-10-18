@@ -27,7 +27,7 @@
 		compatible = "zmk,physical-layout";
 		display-name = "10-Key Layout";
 		transform = <&matrix_transform0>;
-
+        kscan = <&kscan0>;
 		/* Coordinates for visualization (approximate grid) */
 		keys 
             = <&key_physical_attrs 100 100   0   0  0 0 0>
