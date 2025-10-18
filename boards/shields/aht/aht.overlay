@@ -9,10 +9,10 @@
 	
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,physical-layout = &physical_layout0;
+		zmk,physical-layout = &aht_layout;
 	};
 
-	matrix_transform0: matrix_transform0 {
+	aht_transform: aht_transform {
 		compatible = "zmk,matrix-transform";
 		columns = <4>;
         rows = <3>;
@@ -23,10 +23,10 @@
 		>;
 	};
 
-	physical_layout0: physical_layout0 {
+	aht_layout: aht_layout {
 		compatible = "zmk,physical-layout";
 		display-name = "10-Key Layout";
-		transform = <&matrix_transform0>;
+		transform = <&aht_transform>;
         kscan = <&kscan0>;
 		/* Coordinates for visualization (approximate grid) */
 		keys 
