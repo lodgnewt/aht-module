@@ -14,11 +14,12 @@ features:
   - battery
   - power
 
+layers:
+  - name: Base
+  - name: Bluetooth
+  - name: Media
+
 matrix:
   rows: 3
   cols: 4
   diode_direction: COL2ROW
-
-#build:
-#  cmake-args:
-#    - -DZMK_CONFIG="config"

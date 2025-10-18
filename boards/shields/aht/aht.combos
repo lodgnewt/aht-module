@@ -2,28 +2,24 @@
 	combos {
 		compatible = "zmk,combos";
 
-		// Комбо для перехода на base (слой 0)
 		combo_to_base {
 			timeout-ms = <100>;
 			key-positions = <0 1 2>;
 			bindings = <&to 0>;
 		};
 
-		// Комбо для перехода на Studio-editable слой (слой 1)
 		combo_to_studio {
 			timeout-ms = <100>;
 			key-positions = <3 4 5>;
 			bindings = <&to 1>;
 		};
 
-		// Комбо для перехода на media/edit слой (слой 2)
 		combo_to_media {
 			timeout-ms = <100>;
 			key-positions = <6 7 8>;
 			bindings = <&to 2>;
 		};
 
-		// Разблокировка редактирования в Studio
 		combo_studio_unlock {
 			timeout-ms = <150>;
 			key-positions = <0 1>;
