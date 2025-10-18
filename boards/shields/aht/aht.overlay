@@ -6,10 +6,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-	#key_physical_attrs: key_physical_attrs {
-	#	compatible = "zmk,key-physical-attrs";
-	#};
-
+	
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,physical-layout = &physical_layout0;
@@ -20,11 +17,8 @@
 		rows = <3>;
 		columns = <4>;
 		map = <
-			/* row 0 */
 			RC(0,0) RC(0,1) RC(0,2)
-			/* row 1 */
 			RC(1,0) RC(1,1) RC(1,2)
-			/* row 2 */
 			RC(2,0) RC(2,1) RC(2,2) RC(2,3)
 		>;
 	};
@@ -60,7 +54,7 @@
 /* -------------------------------------------------------------------------- */
 
 &pro_micro {
-	kscan0: kscan0 {
+	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 		diode-direction = "col2row";
