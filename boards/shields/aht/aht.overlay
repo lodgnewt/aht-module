@@ -29,7 +29,6 @@
 		display-name = "10-Key Layout";
 		transform = <&default_transform>;
         kscan = <&kscan0>;
-		/* Coordinates for visualization (approximate grid) */
 		keys 
             = <&key_physical_attrs 100 100   0   0  0 0 0>
 			, <&key_physical_attrs 100 100 100   0  0 0 1>
@@ -43,23 +42,20 @@
 			, <&key_physical_attrs 100 100 300 200  0 2 3>
 		    ;
 	};
-};
 
-&pro_micro {
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
-		/*label = "KSCAN";*/
 		diode-direction = "col2row";
 		debounce-press-ms = <5>;
 		debounce-release-ms = <5>;
 
-		row-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-		            <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-		            <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		row-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+		            <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+		            <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
-		col-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>,
-		            <&gpio1 13 GPIO_ACTIVE_LOW>,
-		            <&gpio1 4 GPIO_ACTIVE_LOW>,
-		            <&gpio0 10 GPIO_ACTIVE_LOW>;
+		col-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>,
+		            <&gpio1 13 GPIO_ACTIVE_HIGH>,
+		            <&gpio1 4 GPIO_ACTIVE_HIGH>,
+		            <&gpio0 10 GPIO_ACTIVE_HIGH>;
 	};
 };
